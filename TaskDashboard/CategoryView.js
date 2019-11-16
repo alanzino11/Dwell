@@ -1,12 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+
+
 import Category from './Category';
 import cat from '../images/cat.png';
 import dishes from '../images/dishes.png';
 import budr from '../images/budr.png';
 import plant from '../images/plant.png';
 
-const CategoryView = () => {
+const CategoryView = (props) => {
   return (
     <View style={{ flexDirection: 'row', flex: 1, flexWrap: 'wrap', justifyContent: 'center', }}>
       <Category image={cat} backgroundcolor='#FCE8C7' category='Pet'/>

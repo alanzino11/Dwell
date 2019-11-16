@@ -1,26 +1,31 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text } from 'react-native';
+import { StackNavigator } from 'react-navigation';
+
 import TaskReview from './TaskReview';
 import Header from '../utils/Header';
 import DoubleHeader from '../utils/DoubleHeader';
-import cat from '../images/cat.png';
-import dishes from '../images/dishes.png';
-import budr from '../images/budr.png';
-import plant from '../images/plant.png';
 import CategoryView from './CategoryView';
+import CategoryPage from './CategoryPage';
+import StatusBarBackground from '../utils/StatusBarBackground';
+
 
 const txt = "Anna has completed Washing the Butter.";
 const txt2 = 'Hannah has cleaned the chairs and the floors and the table and under the table, youre doing great hanah lorem ipsum blah blah blah';
 const taskString = "Review Tasks";
 
-const TaskDashboard = () => {
+//console.log(navigate);
+
+const TaskDashboard = (props) => {
   return (
     <View>
+      <StatusBarBackground />
+      <Header txt='Dwell' fontstyle='PingFangTC-Medium'/>
       <Header txt={taskString}/>
       <TaskReview txt={txt} />
       <TaskReview txt={txt2}/>
       {/* <DoubleHeader textLeft='Incomplete Tasks' textRight='Days Passed'/> */}
-      <CategoryView />
+      <CategoryView {...props.navigation.navigate}/>
     </View>
   )
 }

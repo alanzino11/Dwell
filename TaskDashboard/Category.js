@@ -1,8 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
-import styled from 'styled-components';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
 
-const Category = ({ backgroundcolor, image, category }) => {
+
+// const CategoryNavigator = createStackNavigator({
+//   CategoryPage: CategoryPage,
+// })
+
+
+const Category = ({ backgroundcolor, image, category, onpress }) => {
   return (
     <View style={{ height: 100, width: 150, marginRight: 5, marginLeft: 5, marginBottom: 5, marginTop: 5 }}>
       <TouchableOpacity>
