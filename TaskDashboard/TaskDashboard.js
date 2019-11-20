@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 import TaskReview from './TaskReview';
@@ -8,19 +8,17 @@ import DoubleHeader from '../utils/DoubleHeader';
 import CategoryView from './CategoryView';
 import CategoryPage from './CategoryPage';
 import StatusBarBackground from '../utils/StatusBarBackground';
-
+import BoldHeader from '../utils/BoldHeader'
 
 const txt = "Anna has completed Washing the Butter.";
 const txt2 = 'Hannah has cleaned the chairs and the floors and the table and under the table, youre doing great hanah lorem ipsum blah blah blah';
 const taskString = "Review Tasks";
 
-//console.log(navigate);
-
 const TaskDashboard = (props) => {
   return (
     <View>
       <StatusBarBackground />
-      <Header txt='Dwell' fontstyle='PingFangTC-Medium'/>
+      <BoldHeader header='Dwell'/>
       <Header txt={taskString}/>
       <TaskReview txt={txt} />
       <TaskReview txt={txt2}/>
